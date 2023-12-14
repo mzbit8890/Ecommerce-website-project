@@ -1,5 +1,3 @@
-// successUrl="https://commerce-next-yt.vercel.app/stripe/success"
-//       cancelUrl="https://commerce-next-yt.vercel.app/stripe/error"
 "use client";
 
 import { ReactNode } from "react";
@@ -11,8 +9,8 @@ export default function CartProvider({ children }: { children: ReactNode }) {
       mode="payment"
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
-      successUrl="http://localhost:3000/stripe/success"
-      cancelUrl="http://localhost:3000/stripe/error"
+      successUrl="https://ecommerce-website-project-five.vercel.app/stripe/success"
+      cancelUrl="https://ecommerce-website-project-five.vercel.app/stripe/error"
       currency="USD"
       billingAddressCollection={false}
       shouldPersist={true}
